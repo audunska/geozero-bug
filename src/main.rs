@@ -16,5 +16,6 @@ fn main() {
     // Read wkb to geometry
     let wkb = geozero::wkb::Ewkb(buf);
     let geo2 = wkb.to_geo().unwrap();
+    // This fails because geo2 is only POINT(0 1)
     assert_eq!(geo, geo2)
 }
